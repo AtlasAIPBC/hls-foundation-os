@@ -13,7 +13,7 @@ custom_imports = dict(imports=["geospatial_fm"])
 ### Configs
 # Data
 # TO BE DEFINED BY USER: Data root to sen1floods11 downloaded dataset
-data_root = "<path to root directory of sen1floods11 dataset>"
+data_root = "/home/ada/prithvi/datasets/flood_mapping/"
 
 dataset_type = "GeospatialDataset"
 num_classes = 2
@@ -53,7 +53,7 @@ constant = 0.0001
 
 # Model
 # TO BE DEFINED BY USER: path to pretrained backbone weights
-pretrained_weights_path = "<path to pretrained weights>"
+pretrained_weights_path = "/home/ada/prithvi/datasets/crop_classification/weights/Prithvi_100M.pt"
 num_layers = 12
 patch_size = 16
 embed_dim = 768
@@ -67,7 +67,8 @@ eval_epoch_interval = 5
 # TO BE DEFINED BY USER: Save directory
 experiment = "<experiment name>"
 project_dir = "<project dir>"
-work_dir = os.path.join(project_dir, experiment)
+# work_dir = os.path.join(project_dir, experiment)
+work_dir = "/home/ada/prithvi/datasets/flood_mapping/output"
 save_path = work_dir
 
 # Pipelines

@@ -12,7 +12,7 @@ cudnn_benchmark = True
 dataset_type = "GeospatialDataset"
 
 # TO BE DEFINED BY USER: data directory
-data_root = "<path to data root directory>"
+data_root = "/home/ada/prithvi/datasets/burn_scars"
 
 num_frames = 1
 img_size = 224
@@ -51,7 +51,7 @@ image_to_float32 = True
 
 # model
 # TO BE DEFINED BY USER: model path
-pretrained_weights_path = "<path to pretrained weights>"
+pretrained_weights_path = "/home/ada/prithvi/datasets/crop_classification/weights/Prithvi_100M.pt"
 num_layers = 12
 patch_size = 16
 embed_dim = 768
@@ -64,8 +64,8 @@ evaluation_interval = 1000
 # TO BE DEFINED BY USER: model path
 experiment = "<experiment name>"
 project_dir = "<project directory name>"
-work_dir = os.path.join(project_dir, experiment)
-save_path = work_dir
+# work_dir = os.path.join(project_dir, experiment)
+work_dir = "/home/ada/prithvi/datasets/burn_scars/output"
 
 save_path = work_dir
 train_pipeline = [
@@ -252,3 +252,4 @@ model = dict(
     ),
 )
 auto_resume = False
+

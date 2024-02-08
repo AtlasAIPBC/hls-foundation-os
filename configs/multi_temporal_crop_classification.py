@@ -12,7 +12,8 @@ num_workers = 2
 
 # model
 # TO BE DEFINED BY USER: model path
-pretrained_weights_path = "<path to pretrained weights>"
+#pretrained_weights_path = "<path to pretrained weights>"
+pretrained_weights_path = "/home/ada/prithvi/datasets/crop_classification/weights/Prithvi_100M.pt"
 num_layers = 6
 patch_size = 16
 embed_dim = 768
@@ -48,19 +49,20 @@ output_embed_dim = embed_dim * num_frames
 # TO BE DEFINED BY USER: Save directory
 experiment = "<experiment name>"
 project_dir = "<project directory name>"
-work_dir = os.path.join(project_dir, experiment)
+# work_dir = os.path.join(project_dir, experiment)
+work_dir = "/home/ada/prithvi/datasets/crop_classification/output"
 save_path = work_dir
 
 
 dataset_type = "GeospatialDataset"
 
 # TO BE DEFINED BY USER: data directory
-data_root = "<path to data root>"
+data_root = "/home/ada/prithvi/datasets/crop_classification/"
 
 splits = dict(
-    train="<path to train split>",
-    val="<path to val split>",
-    test="<path to test split>",
+    train="/home/ada/prithvi/hls-foundation-os/data_splits/multi_temporal_crop_classification/training_data.txt",
+    val="/home/ada/prithvi/hls-foundation-os/data_splits/multi_temporal_crop_classification/validation_data.txt",
+    test="/home/ada/prithvi/hls-foundation-os/data_splits/multi_temporal_crop_classification/validation_data.txt",
 )
 
 img_norm_cfg = dict(

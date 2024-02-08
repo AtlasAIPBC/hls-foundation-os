@@ -1,0 +1,17 @@
+Looking in links: https://download.openmmlab.com/mmcv/dist/cpu/torch1.11.0/index.html
+Collecting mmcv-full
+  Downloading https://download.openmmlab.com/mmcv/dist/cpu/torch1.11.0/mmcv_full-1.7.2-cp39-cp39-manylinux1_x86_64.whl (26.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 26.7/26.7 MB 24.2 MB/s eta 0:00:00
+Requirement already satisfied: addict in /home/ada/anaconda3/envs/test/lib/python3.9/site-packages (from mmcv-full) (2.4.0)
+Requirement already satisfied: numpy in /home/ada/anaconda3/envs/test/lib/python3.9/site-packages (from mmcv-full) (1.22.3)
+Requirement already satisfied: packaging in /home/ada/anaconda3/envs/test/lib/python3.9/site-packages (from mmcv-full) (23.2)
+Requirement already satisfied: Pillow in /home/ada/anaconda3/envs/test/lib/python3.9/site-packages (from mmcv-full) (10.2.0)
+Requirement already satisfied: pyyaml in /home/ada/anaconda3/envs/test/lib/python3.9/site-packages (from mmcv-full) (6.0.1)
+Requirement already satisfied: yapf in /home/ada/anaconda3/envs/test/lib/python3.9/site-packages (from mmcv-full) (0.40.1)
+Requirement already satisfied: opencv-python>=3 in /home/ada/anaconda3/envs/test/lib/python3.9/site-packages (from mmcv-full) (4.9.0.80)
+Requirement already satisfied: importlib-metadata>=6.6.0 in /home/ada/anaconda3/envs/test/lib/python3.9/site-packages (from yapf->mmcv-full) (7.0.1)
+Requirement already satisfied: platformdirs>=3.5.1 in /home/ada/anaconda3/envs/test/lib/python3.9/site-packages (from yapf->mmcv-full) (4.1.0)
+Requirement already satisfied: tomli>=2.0.1 in /home/ada/anaconda3/envs/test/lib/python3.9/site-packages (from yapf->mmcv-full) (2.0.1)
+Requirement already satisfied: zipp>=0.5 in /home/ada/anaconda3/envs/test/lib/python3.9/site-packages (from importlib-metadata>=6.6.0->yapf->mmcv-full) (3.17.0)
+Installing collected packages: mmcv-full
+Successfully installed mmcv-full-1.7.2

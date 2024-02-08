@@ -6,6 +6,7 @@ import time
 import numpy as np
 import rasterio
 import torch
+from mmengine.config import Config
 from mmcv import Config
 from mmcv.parallel import collate, scatter
 from mmseg.apis import init_segmentor
@@ -101,6 +102,7 @@ def inference_segmentor(model, imgs, custom_test_pipeline=None):
     if next(model.parameters()).is_cuda:
         # data = collate(data, samples_per_gpu=len(imgs))
         # scatter to specified GPU
+        #data = data.to(device)
         data = scatter(data, [device])[0]
     else:
         # img_metas = scatter(data['img_metas'],'cpu')
@@ -150,7 +152,6 @@ def inference_on_file(model, target_image, output_image, custom_test_pipeline):
 
     return time_taken
 
-
 def process_test_pipeline(custom_test_pipeline, bands=None):
     # change extracted bands if necessary
     if bands is not None:
@@ -189,7 +190,8 @@ def inference_on_files(
     # load model
     config = Config.fromfile(config_path)
     config.model.backbone.pretrained = None
-    model = init_segmentor(config, ckpt, device)
+    #model = init_segmentor(config, ckpt, device)
+    model = init_segmentor(config_path, ckpt, device)
 
     # identify images to predict on
     target_images = glob.glob(os.path.join(input_path, "*." + input_type))
